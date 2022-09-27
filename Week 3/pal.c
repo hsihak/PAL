@@ -5,6 +5,7 @@
 /* Write a program that check leap years between two years */
 
 #include <stdio.h>
+#define LEAP 4
 
 int main(void) {
     int yearOne, yearTwo;
@@ -15,9 +16,9 @@ int main(void) {
     int iterations;
 
     if(yearTwo > yearOne) {
-        iterations = (yearTwo - yearOne) / 4;
+        iterations = (yearTwo - yearOne) / LEAP;
     } else {
-        iterations = (yearOne - yearTwo) / 4;
+        iterations = (yearOne - yearTwo) / LEAP;
     }
 
     if(yearOne % 4 == 0 && yearTwo % 4 == 0) {
